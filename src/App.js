@@ -14,7 +14,7 @@ import {io} from 'socket.io-client'
 import CncInfo from './cncInfo.js'
 import Document from './documents.js'
 
-const socket = io.connect("wss://thermalcomepensationdashboard.onrender.com/socket.io");
+const socket = io.connect("http://localhost:5000/");
 function App() {
   // socket.on('timestamp', (data)=> {
   //   console.log(data.time)
