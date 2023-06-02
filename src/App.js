@@ -14,10 +14,10 @@ import {io} from 'socket.io-client'
 import CncInfo from './cncInfo.js'
 import Document from './documents.js'
 
-const socket = io.connect("https://thermalcomepensationdashboard.onrender.com/");
+const socket = io.connect("http://localhost:5000");
 function App() {
   // socket.on('timestamp', (data)=> {
-  //   console.log(data.time)
+    // console.log(socket)
   // })
   const [maindata, setMaindata] = useState(tdata2.map((item,i)=>{
     // let mysr = i+1;
