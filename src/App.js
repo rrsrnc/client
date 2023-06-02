@@ -14,7 +14,8 @@ import {io} from 'socket.io-client'
 import CncInfo from './cncInfo.js'
 import Document from './documents.js'
 
-const socket = io.connect("http://localhost:5000");
+// const socket = io.connect("http://localhost:5000");
+const socket = io.connect("http://18.234.242.241:5000/");
 function App() {
   // socket.on('timestamp', (data)=> {
     // console.log(socket)
