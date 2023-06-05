@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
-// import {socket} from './App.js';
-import Sidebar from "./layout.js";
 import ModelTab from "./modeltab.js";
+import "./selectmodel.css";
 
 const options = [
   { index: 0, dtype: "LinearRegression", label: "Linear Regression" },
@@ -16,21 +15,18 @@ function SelectModel(props) {
   const [selectedindex1, setSelectedindex1] = useState(0);
 
   const handleOptionChange1 = (event) => {
-    // console.log(`Changed selectedindex1 to ${event.target.value}`);
     socket.emit("model_data", options[event.target.value].dtype);
     setSelectedindex1(event.target.value);
-    // console.log(`Changed selectedindex1 to ${event.target.value}`);
-    // console.log(`Changed selectedindex1 to ${options[event.target.value].dtype}`);
   };
   return (
     <>
       <div className="heading">
         <h2>Change ML model</h2>
       </div>
-      <div className="sub-container">
+      <div className="sub-containerSelectModel">
         <div className="sub-container2">
           <div className="upper-sub-container3-1">
-            <h4>Selected Machine Learning model</h4>
+            <h3>Selected Machine Learning model</h3>
           </div>
           <div className="upper-sub-container3-2">
             <select value={selectedindex1} onChange={handleOptionChange1}>
@@ -48,7 +44,7 @@ function SelectModel(props) {
         </div>
         <div className="sub-container2">
           <div className="upper-sub-container4">
-            <h4>Deflection data</h4>
+            <h3>Deflection data</h3>
             <ModelTab data={maindata} />
           </div>
         </div>

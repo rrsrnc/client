@@ -1,0 +1,34 @@
+.sub-containerTable{
+    display: flex;
+    justify-content: center;
+}
+.sub-containerTable {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .sub-container {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .heading h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .subsub-c {
+    overflow-x: auto;
+  }
+  

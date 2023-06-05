@@ -13,10 +13,15 @@ import Dataload from './dataload.js'
 import {io} from 'socket.io-client'
 import CncInfo from './cncInfo.js'
 import Document from './documents.js'
+import { Login,Signup } from './authForm.js'
 
-// const socket = io.connect("http://localhost:5000");
-const socket = io.connect("http://3.222.121.208:5000/");
+const socket = io.connect("http://localhost:5000");
+// const socket = io.connect("http://3.222.121.208:5000/");
+
+//Handle socket connection error
+
 function App() {
+  
   // socket.on('timestamp', (data)=> {
     // console.log(socket)
   // })
@@ -56,6 +61,7 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<main><Sidebar/><Home/></main>}/> */}
         <Route path="/" element={<Layout connect={socket}/>}>
+        {/* <Route path="/" element={<Layout maindata={maindata}/>}> */}
           <Route path="/home" element={<Home/>}/>
           <Route path="/cncinfo" element={<CncInfo/>}/>
           <Route path="/table" element={<Table maindata={maindata}/>}/>
@@ -65,6 +71,8 @@ function App() {
           <Route path="/selectmodel" element={<SelectModel maindata={maindata} socket={socket}/>}/>
           <Route path="/dataload" element={<Dataload maindata={maindata}/>}/>
           <Route path="/documents" element={<Document maindata={maindata}/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/signup' element={<Signup/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

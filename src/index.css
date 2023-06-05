@@ -1,328 +1,96 @@
-/*
-=============== 
-Variables
-===============
-*/
-
-:root {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-}
-/*
-=============== 
-Global Styles
-===============
-*/
-
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  margin: 0;
+  font-size: 16px;
+  background-color: hsl(210, 36%, 96%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.5;
-  font-size: 0.875rem;
 }
+
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
+
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
+  margin: 0;
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-h4 {
-  font-size: 0.875rem;
-}
-p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
-}
-/*  global classes */
-
-/* section */
-.section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-@media screen and (min-width: 992px) {
-  .section {
-    width: 95vw;
-  }
-}
-
-/*
-=============== 
-Home
-===============
-*/
-
-main {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sidebar-toggle {
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
-  font-size: 2rem;
-  background: transparent;
-  border-color: transparent;
-  color: var(--clr-primary-5);
-  /* transition: var(--transition); */
-  cursor: pointer;
-  /* animation: bounce 2s ease-in-out infinite; */
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.btn {
-  text-transform: uppercase;
-  background: var(--clr-black);
-  color: var(--clr-white);
-  padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
-  display: inline-block;
-  transition: var(--transition);
-  font-size: 0.875rem;
-  border: 2px solid var(--clr-black);
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
-  margin: 0.5rem;
-}
-.btn:hover {
-  color: var(--clr-black);
-  background: transparent;
-}
-
-/*
-=============== 
-Modal
-===============
-*/
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: grid;
-  place-items: center;
-  transition: var(--transition);
-  visibility: hidden;
-  z-index: -1;
-}
-/* OPEN/CLOSE MODAL */
-.show-modal {
-  visibility: visible;
-  z-index: 10;
-}
-.modal-container {
-  background: var(--clr-white);
-  border-radius: var(--radius);
-  width: 90vw;
-  height: 30vh;
-  max-width: var(--fixed-width);
-  text-align: center;
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-.close-modal-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
-  background: transparent;
-  border-color: transparent;
-  color: var(--clr-red-dark);
-  cursor: pointer;
-}
-
-/*
-=============== 
-Sidebar
-===============
-*/
-
-
-
-/**************************************************/
-/*** CSS for individual graphs in sub-container ***/
-/**************************************************/
 
 .left-sub-container {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  width: 70%;
-  /* background-color: #6b4b4b; */
-  /* padding: 0px 10px; */
-  height:100%;
+  /* width: 70%;
+  height: 100%; */
 }
 
 .left-sub-box-container {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
-  width: 650px;
-  height:525px;
+  /* width: 650px;
+  height: 525px; */
   background-color: #efefef;
   border: 2px solid #222;
-  padding: 0px 0px 25px 0px;
+  padding: 0 0 25px 0;
   margin-right: 10px;
 }
 
 .left-sub-upper-container {
   display: flex;
   flex-direction: row;
-  align-items:end;
-  width:100%;
+  align-items: flex-end;
+  width: 100%;
   height: 80%;
-  /* background-color: #d0f9b8; */
 }
 
-.y-axis-label{
-  width:1rem;
+.y-axis-label {
+  width: 1rem;
   height: 400px;
-  writing-mode:vertical-lr;
-  transform:rotate(-180deg);
-  position:relative;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  position: relative;
   text-align: center;
   left: 40px;
   align-items: baseline;
-  margin: 0px 10px 0px 0px;
-  /* background-color: aqua; */
+  margin: 0 10px 0 0;
 }
 
 .left-sub-lower-container {
   display: flex;
   flex-direction: row-reverse;
-  /* background-color: #b2cff4; */
-  /* position: relative;
-  bottom: 60px; */
 }
 
 .right-sub-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  align-items:flex-start;
+  align-items: flex-start;
   width: 40%;
-  /* background-color: #d15d5d; */
-  padding: 50px 0px 0px 0px;
+  padding: 50px 0 0 0;
   margin-left: 5px;
 }
 
 .index-container {
   display: flex;
   align-items: center;
-  margin:10px;
+  margin: 10px;
 }
 
 .index-container .small-box {
   width: 80px;
   height: 25px;
-  margin: 0px 10px 0px 10px;
+  margin: 0 10px;
   border: 1px solid black;
   display: flex;
   justify-content: center;
@@ -336,240 +104,48 @@ Sidebar
 }
 
 .index-container .text {
-  margin: 0px 0px 0px 0px;
+  margin: 0;
 }
-
-
-/**************************************************/
-/***   CSS for analysing two graphs at a time ****/
-/**************************************************/
-
-.sub-container2 {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  margin: 0px 15px 0px 15px;
-  align-items: center;
-  /* width: 40%; */
-  height: 100%;
-}
-
-.upper-sub-container2 {
-  background-color: #484848;
-  padding: 2px;
-}
-
-.lower-sub-container2 {
-  margin-top: 20px;
-  background-color: #efefef;
-  border: 2px solid;
-  border-color: #222;
-  padding: 10px 0px 10px 0px;
-  width:100%;
-  /* height:70%; */
-}
-
-.lsc2-lev1 {
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  width:100%;
-  height: 400px;
-  /* background-color: #d0f9b8; */
-  margin:0px;
-  padding:0px;
-}
-
-.y-axis-label2{
-  width:1rem;
-  height: 400px;
-  writing-mode:vertical-lr;
-  transform:rotate(-180deg);
-  position:relative;
-  text-align: center;
-  left: 40px;
-  align-items: baseline;
-  margin: 0px 10px 0px 0px;
-  /* background-color: aqua; */
-}
-
-.lsc2-lev2 {
-  display: flex;
-  flex-direction: row-reverse;
-  height:1.5rem;
-  /* background-color: #b2cff4; */
-  /* position: relative;
-  bottom: 60px; */
-}
-
-.lsc2-lev2 div{
-  text-align: center;
-  width:80%;
-  /* background-color: #869acc; */
-}
-
-.lsc2-lev3{
-  display: flex;
-  flex-direction: column;
-  justify-content:baseline;
-  align-items:center;
-  /* background-color: #d15d5d; */
-  margin:0px;
-}
-
-
-/***** CSS for options tag *****/
-
-.upper-sub-container2 select {
-  border: none;
-  /* border-radius: 4px; */
-  background-color: #d3f0ff;
-  color: #333;
-  font-size: 16px;
-  padding: 5px 10px 5px 20px;
-  width: 150px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.upper-sub-container2 select option {
-  font-size: 16px;
-  background-color: #f8f8f8;
-  color: #333;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.upper-sub-container2 select option:hover {
-  background-color: #ff7f7f;
-  color: #3e8e41;
-}
-
-
-
-
-/**************************************************/
-/***   CSS for making table ****/
-/**************************************************/
-
 
 .subsub-c {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:100%;
-  /* background-color: aqua; */
+  width: 100%;
 }
 
 table {
   border-collapse: collapse;
-  /* table-layout: auto; */
-  /* margin: 40px 0px 0px 0px; */
 }
 
 th {
   border: 1px solid black;
-  padding: 0px 10px 0px 10px;
+  padding: 0 10px;
   text-align: center;
   background-color: aquamarine;
 }
 
 td {
   border: 1px solid black;
-  padding: 0px 10px 0px 10px;
+  padding: 0 10px;
   text-align: center;
 }
 
-/**************************************************/
-/***   CSS for creating download option ****/
-/**************************************************/
-
-
-.sub-container3 {
-  border: 1px solid black;
-  padding: 10px;
-  /* margin-top:100px; */
-}
-
-.subsub-c3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.subsub-cs1 {
-  display: flex;
-  align-items: center;
-}
-
-
-.subsub-cs1 {
-  display: flex;
-  align-items: center;
-  margin:10px 10px 10px 10px;
-}
-
-.subsub-cs1 label {
-  margin-right: 10px;
-}
-
-.subsub-cs1 input {
-  margin-right: 10px;
-  padding:0px 5px 0px 5px;
-  width: 218px;
-  font-size: 20px;
-  border-radius: 5px;
-  text-align: center;
-  /* -webkit-appearance: none;
-  -moz-appearance: none; */
-  appearance: none;
-}
-
-
-.subsub-cs2 button {
-  padding: 5px 10px;
-  margin: 300px 10px 10px 10px;
-  background-color: #0994ff;
-  color: white;
-  border: none;
-  font-size: 20px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.subsub-cs2 button:hover {
-  background-color: #0074e0;
-}
-
-/**************************************************/
-/*********   CSS for selecting ML model   *********/
-/**************************************************/
-
-.upper-sub-container3-1{
-  /* margin:100px 10px 10px 10px; */
-  padding:13px 10px 5px 8px;
+.upper-sub-container3-1 {
+  padding: 13px 10px 5px 8px;
   background-color: #7cc6ff;
   border-radius: 10px;
 }
 
-
 .upper-sub-container3-2 {
-  margin:10px;
-  padding:10px;
-  /* background-color: #2c2c2c; */
-  /* border-radius: 20px; */
+  margin: 10px;
+  padding: 10px;
 }
 
 .upper-sub-container3-2 select {
-  width: 200px;
-  padding: 8px 0px 8px 0px;
-  border: 5px solid #000000;
+  padding: 10px;
+  border: 2px solid #000000;
   border-radius: 10px;
-  height:60px;
   background-color: #fff;
   text-align: center;
   font-size: 16px;
@@ -579,23 +155,16 @@ td {
   appearance: none;
 }
 
-/* .upper-sub-container3-2 select  */
-.myoptions {
-  /* margin: 50px;
-  padding: 50px 10px 50px 10px; */
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 40x;
-  /* appearance: none; */
+.upper-sub-container3-2 select:hover {
+  background-color: hsl(206, 79%, 76%);
+  color: white;
+  cursor: pointer;
 }
 
-/* .upper-sub-container3-2 select  */
-.myoptions:hover {
-  background-color: #b46d6d;
-  /* cursor: pointer; */
-}
-.upper-sub-container3-2 select:hover{
-  cursor: pointer;
+.myoptions {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
 }
 
 .upper-sub-container3-2 select .myoptions:checked {
@@ -604,10 +173,5 @@ td {
 }
 
 .upper-sub-container4 {
-  /* margin:100px 10px 10px 10px; */
-  padding:5px;
-  /* background-color: #2c2c2c; */
-  /* border-radius: 20px; */
+  padding: 5px;
 }
-
-

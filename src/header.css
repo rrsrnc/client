@@ -1,0 +1,44 @@
+.header {
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 3;
+}
+.btn{
+  font-size: 0.875rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  background-color: #1db9ef;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  color: rgb(20, 20, 20);
+  background: transparent;
+}
+.icon {
+  margin-right: 5px;
+  align-items: center;
+  color: white;
+}
+.btn:hover .icon{
+    color: black;
+}
+
+.connection {
+  position: absolute;
+  /* top: 50px;
+    right: 0; */
+  color: red;
+  margin: 10px;
+}

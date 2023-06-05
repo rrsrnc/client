@@ -4,7 +4,9 @@ import "./cncInfo.css";
 function CncInfo() {
   return (
     <>
-      <h3>CNC INFO COMPONENT</h3>
+      <div className="heading">
+        <h3>CNC INFO COMPONENT</h3>
+      </div>
     </>
   );
 }

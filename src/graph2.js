@@ -1,10 +1,7 @@
 import React from "react";
 import IndiDef from "./indidef.js";
-// import { useState } from 'react';
-// import {tdata2} from './tabledata'
-// import {socket} from './App.js';
-import Sidebar from "./layout.js";
 import Graphind from "./graphind.js";
+import "./graph2.css"
 
 function Graph2(props) {
   const maindata = props.maindata;
@@ -13,7 +10,7 @@ function Graph2(props) {
       <div className="heading">
         <h2>Rescent deflection</h2>
       </div>
-      <div className="sub-container">
+      <div className="sub-containerGraph2">
         <div className="left-sub-container">
           <div className="left-sub-box-container">
             <div className="left-sub-upper-container">

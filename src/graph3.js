@@ -1,9 +1,7 @@
 import React from "react";
 import { useState } from "react";
-// import {socket} from './App.js';
-import Sidebar from "./layout.js";
 import Gengraph from "./gengraph.js";
-import Graphind from "./graphind.js";
+import "./graph3.css";
 
 const options = [
   {
@@ -69,7 +67,7 @@ function Graph3(props) {
       <div className="heading">
         <h2>Compare Graphs</h2>
       </div>
-      <div className="sub-container">
+      <div className="grid">
         <div className="sub-container2">
           <div className="upper-sub-container2">
             <select value={selectedindex1} onChange={handleOptionChange1}>

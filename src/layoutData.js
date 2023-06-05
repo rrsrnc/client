@@ -20,7 +20,7 @@ export const links = [
   {
     id: 1,
     url: "/home",
-    text: "home",
+    text: "Home",
     icon: <FaHome />,
   },
   {
@@ -68,7 +68,7 @@ export const links = [
   {
     id: 9,
     url: "/documents",
-    text: "documents",
+    text: "Documents",
     icon: <FaWpforms />,
   },
 ];

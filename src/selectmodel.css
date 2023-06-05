@@ -1,0 +1,68 @@
+.sub-containerSelectModel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .sub-container2 {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 10px;
+    width: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .sub-container2 {
+      width: 100%;
+    }
+  }
+  
+  .upper-sub-container3-1 h3,
+  .upper-sub-container4 h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .upper-sub-container3-2 select {
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .myoptions {
+    font-size: 16px;
+  }
+  
+  .myoptions:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .upper-sub-container4 {
+    margin-top: 20px;
+  }
+  
+  .table-container {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-container th,
+  .table-container td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .table-container th {
+    background-color: #f2f2f2;
+  }
+  

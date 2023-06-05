@@ -1,18 +1,16 @@
 import React from "react";
 import IndiTemps from "./inditemps.js";
-// import { useState } from 'react';
-// import {socket} from './App';
-import Sidebar from "./layout.js";
 import Graphind from "./graphind.js";
+import "./graph1.css"
 
 function Graph1(props) {
   const maindata = props.maindata;
   return (
     <>
-      <div className="heading">
-        <h2>Current Temperatures</h2>
-      </div>
-      <div className="sub-container">
+        <div className="heading">
+          <h2>Current Temperatures</h2>
+        </div>
+      <div className="sub-containerGraph1">
         <div className="left-sub-container">
           <div className="left-sub-box-container">
             <div className="left-sub-upper-container">
