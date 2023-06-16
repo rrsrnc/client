@@ -15,7 +15,9 @@ import CncInfo from './cncInfo.js'
 import Document from './documents.js'
 import { Login,Signup } from './authForm.js'
 
-const socket = io.connect("http://localhost:5000");
+// const socket = io.connect("http://localhost:5000");
+const socket = io.connect(window.location.origin);
+// console.log(socket)
 // const socket = io.connect("http://3.222.121.208:5000/");
 
 //Handle socket connection error
@@ -55,7 +57,7 @@ function App() {
         return arr;
       })
     })
-  },[socket]);
+  },[]);
   return (
     <BrowserRouter>
       <Routes>

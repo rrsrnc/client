@@ -26,7 +26,8 @@ function Dataload(props) {
         setDownloadStatus({ status: "downloading", message: "Downloading..." });
 
         const response = await fetch(
-          `http://localhost:5000/api/v1/download?date=${convertedDate}`,
+          // `http://localhost:5000/api/v1/download?date=${convertedDate}`,
+          `${window.location.origin}/api/v1/download?date=${convertedDate}`,
           {
             method: "GET",
           }

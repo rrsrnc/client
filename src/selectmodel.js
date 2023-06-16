@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import ModelTab from "./modeltab.js";
 import "./selectmodel.css";
 
 const options = [
-  { index: 0, dtype: "LinearRegression", label: "Linear Regression" },
-  { index: 1, dtype: "LASSORegression", label: "LASSO Regression" },
+  { index: 0, dtype: "LinearRegression", label: "LinearRegression" },
+  { index: 1, dtype: "LASSORegression", label: "LASSORegression" },
   { index: 2, dtype: "AdaBoost", label: "AdaBoost" },
 ];
 
 function SelectModel(props) {
   const maindata = props.maindata;
   let socket = props.socket;
-  const [selectedindex1, setSelectedindex1] = useState(0);
+  let MLmodel = maindata[0].MLmodel;
 
+  const [index, setIndex] = useState(0);
+  const [selectedindex1, setSelectedindex1] = useState(index);
+
+  useEffect(() => {
+    
+    for (let i = 0; i < options.length; i++) {
+      if (options[i].label === MLmodel) {
+        setIndex(i);
+        setSelectedindex1(index);
+        // console.log(MLmodel)
+      }
+    }
+  }, [MLmodel, index]);
   const handleOptionChange1 = (event) => {
     socket.emit("model_data", options[event.target.value].dtype);
     setSelectedindex1(event.target.value);
