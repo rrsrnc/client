@@ -15,7 +15,7 @@ import CncInfo from './cncInfo.js'
 import Document from './documents.js'
 
 // const socket = io.connect("http://localhost:5000");
-const socket = io.connect("http://3.222.121.208:5000/");
+const socket = io.connect("https://iotd.onrender.com/");
 function App() {
   // socket.on('timestamp', (data)=> {
     // console.log(socket)
