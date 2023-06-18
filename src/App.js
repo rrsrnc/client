@@ -15,7 +15,9 @@ import CncInfo from './cncInfo.js'
 import Document from './documents.js'
 import { Login,Signup } from './authForm.js'
 
-const socket = io.connect("https://iotd.onrender.com/");
+// const socket = io.connect("https://iotd.onrender.com/");
+const socket = io.connect("http://localhost:5000");
+
 
 // const socket = io.connect(window.location.origin);
 // console.log(socket)
