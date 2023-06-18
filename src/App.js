@@ -15,8 +15,9 @@ import CncInfo from './cncInfo.js'
 import Document from './documents.js'
 import { Login,Signup } from './authForm.js'
 
-// const socket = io.connect("http://localhost:5000");
-const socket = io.connect(window.location.origin);
+const socket = io.connect("https://iotd.onrender.com/");
+
+// const socket = io.connect(window.location.origin);
 // console.log(socket)
 // const socket = io.connect("http://3.222.121.208:5000/");
 
@@ -59,7 +60,7 @@ function App() {
     })
   },[]);
   return (
-    <BrowserRouter basename="/client/">
+    <BrowserRouter basename="/client">
       <Routes>
         {/* <Route path="/" element={<main><Sidebar/><Home/></main>}/> */}
         <Route path="/" element={<Layout connect={socket}/>}>
