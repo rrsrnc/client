@@ -59,7 +59,7 @@ function App() {
     })
   },[]);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/client/">
       <Routes>
         {/* <Route path="/" element={<main><Sidebar/><Home/></main>}/> */}
         <Route path="/" element={<Layout connect={socket}/>}>
