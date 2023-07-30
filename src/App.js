@@ -25,6 +25,11 @@ const socket = io.connect("http://localhost:5000");
 
 //Handle socket connection error
 
+// <<<<<<< HEAD
+// ======
+// // const socket = io.connect("http://localhost:5000");
+// const socket = io.connect("https://iotd.onrender.com/");
+// >>>>>>> 3b8bf6c1e83ca9caf337e23141f94efe4ff050a9
 function App() {
   
   // socket.on('timestamp', (data)=> {
